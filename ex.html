@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form id="f">
+    <input type="number" id="a" width="100" />
+    <select id="b">
+        <option value="1">Foot to Meter</option>
+        <option value="2">Meter to Foot</option>
+    </select>
+    <button type="button" onclick="convert()">Convert</button>
+</form>
+<p id="result"></p>
+    <script>
+function convert() {
+let a = document.getElementById("a").value;
+let result = 0;
+let gap = "m";
+if (document.getElementById("b").value === "1") {
+result = a * 0.305;
+} else {
+result = a * 3.279;
+gap = "f";
+}
+document.getElementById("result").innerHTML = result + gap;
+}
+     </script>
+
+</body>
+</html>
